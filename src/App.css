@@ -118,3 +118,111 @@ body {
   letter-spacing: 1px;
   margin-top: 2rem;
 }
+
+.showcase-bg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #ecf0f3 0%, #e8f1ff 100%);
+  padding: 0;
+  margin: 0;
+}
+.showcase-section {
+  max-width: 1080px;
+  margin: auto;
+  padding: 48px 10px 32px 10px;
+  text-align: center;
+}
+.showcase-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  letter-spacing: -1px;
+}
+/* DESKTOP */
+.showcase-team-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px 28px;
+  justify-content: center;
+  align-items: stretch;
+}
+.showcase-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 38px 24px 22px 24px;
+  box-shadow: 0 3px 32px #1976d21a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.23s;
+}
+.showcase-card:hover {
+  box-shadow: 0 8px 56px #1976d255;
+}
+.showcase-img-wrap {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 16px #1976d233;
+  background: #e4e9f7;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.23s;
+}
+.showcase-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+.showcase-name {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 4px;
+}
+.showcase-title-small {
+  font-size: 1.08rem;
+  color: #222;
+  opacity: 0.85;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+/* MOBILE 2 kolom */
+@media (max-width: 700px) {
+  .showcase-title { font-size: 1.5rem; }
+  .showcase-section { padding: 30px 2px 16px 2px; }
+  .showcase-team-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 8px;
+  }
+  .showcase-card {
+    padding: 16px 4px 10px 4px;
+  }
+  .showcase-img-wrap {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+  .showcase-name { font-size: 1rem; }
+  .showcase-title-small { font-size: 0.9rem; }
+}
+/* HP kecil: 1 kolom */
+@media (max-width: 420px) {
+  .showcase-team-list {
+    grid-template-columns: 1fr;
+  }
+  .showcase-card {
+    padding: 10vw 0 5vw 0;
+  }
+  .showcase-img-wrap {
+    width: 56vw;
+    height: 56vw;
+  }
+  .LinkHome{
+    color: #222;
+  }
+}

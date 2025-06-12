@@ -8,8 +8,8 @@ function App() {
     <BrowserRouter basename="/reactJs">
       <header className="header">
         <h1>ESTA</h1>
-        <nav>
-          <Link to="/">Home</Link> | <Link to="/showcase">Showcase Tim</Link>
+        <nav className="LinkHome">
+          <Link className="LinkHome" to="/">Home</Link> | <Link to="/showcase">Showcase Tim</Link>
         </nav>
       </header>
       <Routes>
