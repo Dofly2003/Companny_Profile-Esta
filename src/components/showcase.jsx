@@ -19,12 +19,17 @@ const team = [
   {
     name: "Naufal Dzakwani",
     title: "Chief Technical Officer",
-    imgSrc: "/reactJs/assets/profile/r.jpg",
+    imgSrc: "/reactJs/assets/profile/nd.jpg",
   },
   {
     name: "Naufal Zakaria",
     title: "Chief Technology Officer",
-    imgSrc: "/reactJs/assets/profile/r.jpg",
+    imgSrc: "/reactJs/assets/profile/nz.jpg",
+  },
+  {
+    name: "Langam Dewa",
+    title: "Chief Marketing Officer",
+    imgSrc: "/reactJs/assets/profile/L.jpg",
   },
 ];
 
