@@ -11,7 +11,7 @@ export default defineConfig({
       manifest: {
         name: 'My React Vite App',
         short_name: 'ReactVite',
-        start_url: '/',
+        start_url: '/reactJs/', // <<< ini yang penting!
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#42b883',
