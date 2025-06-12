@@ -2,31 +2,31 @@ import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import InstallPWAButton from './components/installButton';
 
-// Gambar profil dari public
+// Data anggota tim
 const team = [
   {
     name: "Ananda Dony Setiawan",
     title: "Chief Technology Officer",
-    imgSrc: "/assets/profile/d.jpg",
+    imgSrc: "/reactJs/assets/profile/d.jpg",
   },
   {
     name: "Haykal Azrel",
     title: "Chief Executive Officer",
-    imgSrc: "/assets/profile/h.jpg",
+    imgSrc: "/reactJs/assets/profile/h.jpg",
   },
   {
     name: "Rizal Firmansyah",
     title: "Chief Marketing Officer",
-    imgSrc: "/assets/profile/r.jpg",
+    imgSrc: "/reactJs/assets/profile/r.jpg",
   },
 ];
 
-// Kustom hook untuk efek parallax
+// Hook parallax
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-// Komponen anggota tim
+// Komponen anggota tim dengan parallax
 function TeamMember({ name, title, imgSrc }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
@@ -34,7 +34,7 @@ function TeamMember({ name, title, imgSrc }) {
 
   return (
     <section className="img-container">
-      <div ref={ref}>
+      <div ref={ref} className="img-wrapper">
         <img src={imgSrc} alt={name} />
       </div>
       <motion.h2
@@ -90,12 +90,12 @@ function App() {
   );
 }
 
-// Styles
+// CSS-in-JS agar gambar bulat, tengah, dan responsif
 function TeamShowcaseStyles() {
   return (
     <style>{`
-      html {
-        scroll-snap-type: y mandatory;
+      html, body, #root {
+        height: 100%;
       }
       #team-showcase {
         font-family: "Azeret Mono", monospace;
@@ -108,25 +108,30 @@ function TeamShowcaseStyles() {
         justify-content: center;
         align-items: center;
         position: relative;
+        background: #fff;
       }
-      .img-container > div {
+      .img-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 200px;
         height: 200px;
-        margin: 20px;
+        margin: 20px 0 16px;
         background: #f5f5f5;
         overflow: hidden;
         border-radius: 50%;
         box-shadow: 0 0 24px #d2d2d2;
       }
-      .img-container img {
+      .img-wrapper img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 50%;
+        display: block;
       }
       .img-container h2 {
         color: #1976d2;
-        margin: 20px 0 10px;
+        margin: 0 0 10px 0;
         font-size: 28px;
         font-weight: 700;
         letter-spacing: -1px;
@@ -153,7 +158,7 @@ function TeamShowcaseStyles() {
         z-index: 999;
       }
       @media (max-width: 600px) {
-        .img-container > div {
+        .img-wrapper {
           width: 120px;
           height: 120px;
         }
