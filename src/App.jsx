@@ -49,17 +49,17 @@ function App() {
           <div className="section-title">Our Team</div>
           <div className="team">
             <div className="team-member">
-              <img src={dProfile} style={{ width: 100, height: 100, borderRadius: '50%' }} alt="CEO"  />
+              <img src="/assets/profile/d.jpg" style={{ width: 100, height: 100, borderRadius: '50%' }} alt="CEO"  />
               <div><strong>Ananda Dony Setiawan</strong></div>
               <div>Chief Technology Officer</div>
             </div>
             <div className="team-member">
-              <img src={hProfile} style={{ width: 100, height: 100, borderRadius: '50%' }} alt="CTO"  />
+              <img src="/assets/profile/d.jpg" style={{ width: 100, height: 100, borderRadius: '50%' }} alt="CTO"  />
               <div><strong>Haykal Azrel</strong></div>
               <div>Chief Executive Officer</div>
             </div>
             <div className="team-member">
-              <img src={rProfile} style={{ width: 100, height: 100, borderRadius: '50%' }} alt="Lead  UI/UX" />
+              <img src="/assets/profile/d.jpg" style={{ width: 100, height: 100, borderRadius: '50%' }} alt="Lead  UI/UX" />
               <div><strong>Rizal Firmansyah</strong></div>
               <div>Chief Marketing Officer</div>
             </div>
