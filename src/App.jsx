@@ -68,7 +68,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        &copy; {new Date().getFullYear()} BlueWave Solutions. All rights reserved.
+        &copy; {new Date().getFullYear()} ESTA. All rights reserved.
       </footer>
     </>
 
