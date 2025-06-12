@@ -1,1 +1,1 @@
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/reactJs/sw.js', { scope: '/reactJs/' })})}
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/Companny_Profile-Esta/sw.js', { scope: '/Companny_Profile-Esta/' })})}
