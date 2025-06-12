@@ -4,32 +4,32 @@ const team = [
   {
     name: "Ananda Dony Setiawan",
     title: "Chief Technology Officer",
-    imgSrc: "/reactJs/assets/profile/d.jpg",
+    imgSrc: "/Companny_Profile-Esta/assets/profile/d.jpg",
   },
   {
     name: "Haykal Azrel",
     title: "Chief Executive Officer",
-    imgSrc: "/reactJs/assets/profile/h.jpg",
+    imgSrc: "/Companny_Profile-Esta/assets/profile/h.jpg",
   },
   {
     name: "Rizal Firmansyah",
     title: "Chief Marketing Officer",
-    imgSrc: "/reactJs/assets/profile/r.jpg",
+    imgSrc: "/Companny_Profile-Esta/assets/profile/r.jpg",
   },
   {
     name: "Naufal Dzakwani",
     title: "Chief Technical Officer",
-    imgSrc: "/reactJs/assets/profile/nd.jpg",
+    imgSrc: "/Companny_Profile-Esta/assets/profile/nd.jpg",
   },
   {
     name: "Naufal Zakaria",
     title: "Chief Technology Officer",
-    imgSrc: "/reactJs/assets/profile/nz.jpg",
+    imgSrc: "/Companny_Profile-Esta/assets/profile/nz.jpg",
   },
   {
     name: "Langam Dewa",
     title: "Chief Marketing Officer",
-    imgSrc: "/reactJs/assets/profile/L.jpg",
+    imgSrc: "/Companny_Profile-Esta/assets/profile/L.jpg",
   },
 ];
 
