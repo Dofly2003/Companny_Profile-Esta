@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import InstallPWAButton from './components/installButton';
 function App() {
   const [isStandalone, setIsStandalone] = useState(false);
 
@@ -23,12 +24,15 @@ function App() {
         textAlign: "center"
       }}>
         <h1>React Vite PWA</h1>
-        <p>Aplikasi simple dengan Vite + React + PWA</p>
+        <p>Aplikasi simple dengan Vite + React</p>
+        <p>di tambahkan PWA</p>
         <div>
           <b>Status PWA:</b>{" "}
           {isStandalone ? "Sudah diinstall (Standalone)" : "Belum diinstall"}
         </div>
+        <InstallPWAButton />
       </div>
+      
   );
 }
 
