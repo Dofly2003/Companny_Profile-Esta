@@ -1,36 +1,18 @@
-import { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import InstallPWAButton from './components/installButton';
+"use client";
 
-// Gambar profil dari public
-const team = [
-  {
-    name: "Ananda Dony Setiawan",
-    title: "Chief Technology Officer",
-    imgSrc: "/assets/profile/d.jpg",
-  },
-  {
-    name: "Haykal Azrel",
-    title: "Chief Executive Officer",
-    imgSrc: "/assets/profile/h.jpg",
-  },
-  {
-    name: "Rizal Firmansyah",
-    title: "Chief Marketing Officer",
-    imgSrc: "/assets/profile/r.jpg",
-  },
-];
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 // Kustom hook untuk efek parallax
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-// Komponen anggota tim
-function TeamMember({ name, title, imgSrc }) {
+// Komponen anggota tim dengan parallax
+function TeamMember({ name, title, imgSrc, id, distance = 150 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 100);
+  const y = useParallax(scrollYProgress, distance);
 
   return (
     <section className="img-container">
@@ -56,7 +38,26 @@ function TeamMember({ name, title, imgSrc }) {
   );
 }
 
-function App() {
+export default function TeamShowcase() {
+  // Data anggota tim
+  const team = [
+    {
+      name: "Ananda Dony Setiawan",
+      title: "Chief Technology Officer",
+      imgSrc: "/assets/profile/d.jpg",
+    },
+    {
+      name: "Haykal Azrel",
+      title: "Chief Executive Officer",
+      imgSrc: "/assets/profile/h.jpg",
+    },
+    {
+      name: "Rizal Firmansyah",
+      title: "Chief Marketing Officer",
+      imgSrc: "/assets/profile/r.jpg",
+    },
+  ];
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -65,41 +66,30 @@ function App() {
   });
 
   return (
-    <>
-      <header className="header">
-        <h1>ESTA</h1>
-        <p>Empowering Your Business with Innovative Technology</p>
-      </header>
-      <main>
-        <section className="section">
-          <div className="section-title">Our Team</div>
-        </section>
-        <div id="team-showcase">
-          {team.map((member, i) => (
-            <TeamMember key={i} {...member} />
-          ))}
-          <motion.div className="progress" style={{ scaleX }} />
-        </div>
-      </main>
-      <InstallPWAButton />
-      <footer className="footer">
-        &copy; {new Date().getFullYear()} ESTA. All rights reserved.
-      </footer>
+    <div id="team-showcase">
+      {team.map((member, i) => (
+        <TeamMember key={i} {...member} id={i + 1} />
+      ))}
+      <motion.div className="progress" style={{ scaleX }} />
       <TeamShowcaseStyles />
-    </>
+    </div>
   );
 }
 
-// Styles
+/**
+ * Styles (CSS-in-JS)
+ */
 function TeamShowcaseStyles() {
   return (
     <style>{`
       html {
         scroll-snap-type: y mandatory;
       }
+
       #team-showcase {
         font-family: "Azeret Mono", monospace;
       }
+
       .img-container {
         height: 100vh;
         scroll-snap-align: start;
@@ -109,6 +99,7 @@ function TeamShowcaseStyles() {
         align-items: center;
         position: relative;
       }
+
       .img-container > div {
         width: 200px;
         height: 200px;
@@ -118,12 +109,14 @@ function TeamShowcaseStyles() {
         border-radius: 50%;
         box-shadow: 0 0 24px #d2d2d2;
       }
+
       .img-container img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 50%;
       }
+
       .img-container h2 {
         color: #1976d2;
         margin: 20px 0 10px;
@@ -135,6 +128,7 @@ function TeamShowcaseStyles() {
         position: relative;
         z-index: 2;
       }
+
       .img-container .title {
         color: #333;
         font-size: 18px;
@@ -142,6 +136,7 @@ function TeamShowcaseStyles() {
         text-align: center;
         margin-bottom: 10px;
       }
+
       .progress {
         position: fixed;
         left: 0;
@@ -152,6 +147,7 @@ function TeamShowcaseStyles() {
         transform: scaleX(0);
         z-index: 999;
       }
+
       @media (max-width: 600px) {
         .img-container > div {
           width: 120px;
@@ -167,5 +163,3 @@ function TeamShowcaseStyles() {
     `}</style>
   );
 }
-
-export default App;
