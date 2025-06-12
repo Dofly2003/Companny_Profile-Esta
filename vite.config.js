@@ -17,16 +17,10 @@ export default defineConfig({
         theme_color: '#1976d2',
         icons: [
           {
-            src: 'assets/profile/icon.png', // pastikan path dan penamaan benar!
-            type: 'image/png',
-            sizes: '512x512'
-          },
-          // Jika ingin menambah ukuran lain, duplikat dan sesuaikan
-          // {
-          //   src: 'assets/profile/icon-192.png',
-          //   type: 'image/png',
-          //   sizes: '192x192'
-          // }
+            src: 'assets/profile/icon.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
         ]
       }
     })
