@@ -11,7 +11,7 @@ export default defineConfig({
   manifest: {
     short_name: 'ESTA',
     name: 'ESTA Profile',
-    start_url: '/reactJs/',
+    start_url: '/Companny_Profile-Esta/',
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#1976d2',
