@@ -6,7 +6,7 @@ import StickyNavbar from "./components/nav"; // Import the sticky navbar
 
 function App() {
   return (
-    <BrowserRouter basename="/reactJs">
+    <BrowserRouter basename="/Companny_Profile-Esta">
       <StickyNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
