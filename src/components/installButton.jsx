@@ -1,33 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-export default function InstallPWAButton() {
-  const [deferredPrompt, setDeferredPrompt] = useState(null);
-  const [showInstall, setShowInstall] = useState(false);
-
+export default function InstallPWAPopup() {
   useEffect(() => {
     const handler = (e) => {
       e.preventDefault();
-      setDeferredPrompt(e);
-      setShowInstall(true);
+      // Langsung tampilkan prompt install
+      e.prompt();
     };
     window.addEventListener("beforeinstallprompt", handler);
     return () => window.removeEventListener("beforeinstallprompt", handler);
   }, []);
 
-  const handleInstallClick = () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then(() => {
-        setShowInstall(false);
-        setDeferredPrompt(null);
-      });
-    }
-  };
-
-  if (!showInstall) return null;
-  return (
-    <button onClick={handleInstallClick}>
-      Install Aplikasi
-    </button>
-  );
+  return null; // Tidak render apa-apa
 }
