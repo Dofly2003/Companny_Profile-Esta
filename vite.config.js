@@ -10,7 +10,7 @@ export default defineConfig({
   registerType: 'autoUpdate',
   manifest: {
     short_name: 'ESTA',
-    name: 'Employment Start Tracking App',
+    name: 'ESTA Profile',
     start_url: '/reactJs/',
     display: 'standalone',
     background_color: '#ffffff',
