@@ -1,30 +1,34 @@
-import { VitePWA } from 'vite-plugin-pwa';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { VitePWA } from 'vite-plugin-pwa'
 
-export default {
+export default defineConfig({
+  base: '/reactJs/',
+  start_url: '/reactJs/',
   plugins: [
-    // plugin lain
+    react(),
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        short_name: 'ESTA',
-        name: 'Employment Start Tracking App',
+        name: 'My React Vite App',
+        short_name: 'ReactVite',
+        start_url: '/reactJs/', // <<< ini yang penting!
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#42b883',
         icons: [
           {
-            src: './assets/profile/icon.png',
-            type: 'image/png',
-            sizes: '512x512'
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
           },
           {
-            src: './assets/profile.icon.png',
-            type: 'image/png',
-            sizes: '512x512'
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
           }
-        ],
-        start_url: '.',
-        display: 'standalone',
-        theme_color: '#1976d2',
-        background_color: '#ffffff'
+        ]
       }
     })
   ]
-}
+})
