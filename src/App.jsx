@@ -1,20 +1,16 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
 import Showcase from "./components/showcase";
 import InstallPWAButton from "./components/installButton";
+import StickyNavbar from "./components/nav"; // Import the sticky navbar
 
 function App() {
   return (
     <BrowserRouter basename="/reactJs">
-      <header className="header">
-        <h1>ESTA</h1>
-        <nav className="LinkHome">
-          <Link className="LinkHome" to="/">Home</Link> | <Link to="/showcase">Showcase Tim</Link>
-        </nav>
-      </header>
+      <StickyNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/showcase" element={<Showcase />} />
+        <Route path="/about" element={<Showcase />} />
       </Routes>
       <InstallPWAButton />
       <footer className="footer">

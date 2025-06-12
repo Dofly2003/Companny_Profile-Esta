@@ -1,0 +1,106 @@
+.sta-navbar {
+  position: sticky;  /* atau coba 'fixed' jika sticky masih tidak jalan */
+  top: 0;
+  width: 100vw;
+  min-height: 56px;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  /* transition untuk animasi shadow saat sticky */
+  transition: box-shadow 0.22s;
+}
+
+
+/* Logo kiri */
+.sta-navbar__logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #202913;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 16px 0 0 48px;
+  letter-spacing: 4px;
+  z-index: 2;
+}
+
+/* Nav absolut, benar2 di tengah atas */
+.sta-navbar__nav {
+  position: absolute;
+  left: 50%;
+  top: 9px;
+  transform: translateX(-50%);
+  /* Ukuran nav bar yang lebih kecil */
+  width: 570px;
+  max-width: 80vw;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+.sta-navbar__nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  gap: 0;
+  background: #fff;
+  border-radius: 2em;
+  box-shadow: 0 4px 18px #ededed60;
+  padding: 4px 0;
+  list-style: none;
+  margin: 0;
+}
+.sta-navbar__nav li {
+  font-size: 1.10rem;
+  font-weight: 500;
+  flex: 1 1 0;
+  text-align: center;
+}
+.sta-navbar__nav li a {
+  color: #202913;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 7px 0 7px 0;
+  border-radius: 2em;
+  transition: background 0.18s, color 0.18s;
+}
+.sta-navbar__nav li.active a,
+.sta-navbar__nav li a:hover {
+  background: #202913;
+  color: #93eb97;
+}
+
+/* Icon kanan (jika mau dipakai) */
+.sta-navbar__icon {
+  min-width: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 2rem;
+  color: #93eb97;
+  margin: 16px 40px 0 0;
+  z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .sta-navbar__nav {
+    width: 98vw;
+    max-width: 98vw;
+    top: 49px;
+  }
+  .sta-navbar__logo {
+    font-size: 1.1rem;
+    margin-left: 16px;
+    margin-top: 12px;
+  }
+  .sta-navbar__icon {
+    margin-right: 12px;
+    margin-top: 12px;
+  }
+  .sta-navbar__nav ul {
+    font-size: 0.96rem;
+    padding: 2px 0;
+  }
+}

@@ -18,6 +18,7 @@ function App() {
   return (
     <>
       <header className="header">
+        <div className="logo">ESTA</div>
         <p>Empowering Your Business with Innovative Technology</p>
       </header>
 
