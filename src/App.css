@@ -55,57 +55,6 @@ body {
   color: var(--blue-dark);
 }
 
- .header {
-  background: linear-gradient(90deg, var(--blue-light), var(--blue-dark));
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0 1.5rem 0;
-  position: relative;
-  flex-direction: column;
-}
-
-.header-logo {
-  font-size: 2.5rem;
-  font-weight: bold;
-  flex: 1;
-  text-align: left;
-  margin-left: 40px;
-}
-
-.header-nav {
-  flex: 2;
-  text-align: center;
-  font-size: 1.25rem;
-}
-
-.header-nav a {
-  color: #2e0657;
-  text-decoration: underline;
-  margin: 0 8px;
-}
-
-/* Responsif untuk layar kecil */
-@media (max-width: 700px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 0 1rem 0;
-    
-  }
-  .header-logo {
-    margin-left: 20px;
-    margin-bottom: 0.5rem;
-    text-align: left;
-  }
-  .header-nav {
-    text-align: left;
-    font-size: 1rem;
-    margin-left: 20px;
-  }
-}
-
 .section {
   max-width: 900px;
   margin: 2rem auto;
@@ -259,5 +208,100 @@ body {
   }
   .LinkHome{
     color: #222;
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+  margin-bottom: 18px;
+  background: none; /* Hindari bg di luar gradasi */
+}
+
+.header-content {
+ background: linear-gradient(90deg, #56a0d3 0%, #003366 100%);
+  border-radius: 0.7em;
+  padding: 38px 18px 28px 18px;
+  max-width: 1200px;       /* Panjang seperti footer di desktop */
+  width: 100%;             /* Full width parent */
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  margin: 0 auto;          /* Tengah di parent */
+  display: block;
+}
+
+.header-logo {
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.header-content p {
+  font-size: 1.11em;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  .header-content {
+    max-width: 97vw;
+    padding: 22px 2vw 14px 2vw;
+    border-radius: 0.8em;
+  }
+  .header-logo {
+    font-size: 1.7em;
+    margin-bottom: 8px;
+  }
+}.header {
+
+}
+
+.header-content {
+  width: 100%;
+  background: linear-gradient(90deg, var(--blue-light), var(--blue-dark));
+  color: white;
+  display: flex;
+  align-items: center;        /* Ini sudah center horizontal */
+  justify-content: center;
+  padding: 2rem 0 1.5rem 0;
+  position: relative;
+  flex-direction: column;
+}
+
+.header-logo {
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.header-content p {
+  font-size: 1.11em;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Responsive mobile: tetap proporsional */
+@media (max-width: 700px) {
+  .header-content {
+    max-width: 98vw;
+    padding: 22px 2vw 14px 2vw;
+    border-radius: 0.8em;
+  }
+  .header-logo {
+    font-size: 1.7em;
+    margin-bottom: 8px;
   }
 }

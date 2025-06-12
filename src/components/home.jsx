@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-      <header className="header">
-        <div className="logo">ESTA</div>
+      <header className="header-content">
+        <div className="header-logo">ESTA</div>
         <p>Empowering Your Business with Innovative Technology</p>
       </header>
 
