@@ -25,7 +25,7 @@ function App() {
       }}>
         <h1>React Vite PWA</h1>
         <p>Aplikasi simple dengan Vite + React</p>
-        <p>di tambahkan PWA</p>
+        <p>di tambahkan PWA tapi eror</p>
         <div>
           <b>Status PWA:</b>{" "}
           {isStandalone ? "Sudah diinstall (Standalone)" : "Belum diinstall"}
