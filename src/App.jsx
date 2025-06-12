@@ -66,7 +66,7 @@ function App() {
           </div>
         </section>
       </main>
-
+    <InstallPWAButton />
       <footer className="footer">
         &copy; {new Date().getFullYear()} ESTA. All rights reserved.
       </footer>
