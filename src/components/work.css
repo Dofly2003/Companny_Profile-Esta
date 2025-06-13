@@ -192,17 +192,19 @@ body, html, #root {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 87vw;
+    bottom: 92vw;
     width: 100%;
     margin: 0 auto;
     background: rgba(255,255,255,1);
-   
+    border-radius: 18px 18px 18px 18px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+    padding: 10px ;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
     max-width: 100vw;
-  transform: translateX(-7%);
+  transform: translateX(-2%);
 
   }
   .absolute-card-content h3 {
