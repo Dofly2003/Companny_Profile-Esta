@@ -4,6 +4,7 @@ import InstallPWAButton from './installButton';
 import dProfile from '../assets/profile/d.jpg';
 import hProfile from '../assets/profile/h.jpg';
 import rProfile from '../assets/profile/r.jpg';
+// import InstallPWAButton from "./components/installButton";
 function App() {
   const [isStandalone, setIsStandalone] = useState(false);
 
