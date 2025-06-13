@@ -19,6 +19,11 @@ export default function HeroSection() {
       { y: 100, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
     );
+    gsap.fromTo(
+      imgRef.current,
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    );
 
     // Animasi parallax saat scroll
     gsap.to(textRef.current, {
@@ -33,7 +38,7 @@ export default function HeroSection() {
     gsap.to(imgRef.current, {
       y: -100,
       scrollTrigger: {
-        trigger: textRef.current,
+        trigger: imgRef.current,
         start: "top center",
         end: "bottom top",
         scrub: true
@@ -79,6 +84,7 @@ export default function HeroSection() {
         <img
           src={funny}
           ref={imgRef}
+          alt="Funny"
           style={{
             position: "absolute",
             top: "25%",
@@ -104,7 +110,9 @@ export default function HeroSection() {
           }}
         />
       </div>
-      <div className="absolute-card">
+      <div style={{
+        width: "100%",
+      }} className="absolute-card">
         <div className="absolute-card-content">
           <h3>ESTA Team</h3>
           <p>Innovative, creative, and collaborative.</p>
