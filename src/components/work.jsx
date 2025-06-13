@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function HeroSection() {
   const textRef = useRef(null);
   const imgRef = useRef(null);
+  const Group = useRef(null);
 
   useEffect(() => {
     // Animasi popup saat masuk (dari bawah ke posisi aslinya)
@@ -24,7 +25,12 @@ export default function HeroSection() {
       { y: 100, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
     );
-
+    gsap.fromTo(
+      Group.current,
+      { y: 0, opacity: 0 },
+      { y: 100, opacity: 1, duration: 1, ease: "power3.out" }
+    );
+    
     // Animasi parallax saat scroll
     gsap.to(textRef.current, {
       y: -100,
@@ -98,6 +104,7 @@ export default function HeroSection() {
           }}
         />
         <img
+          ref={Group}
           src={memberImg}
           alt="Anggota"
           style={{
