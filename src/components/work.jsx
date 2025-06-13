@@ -114,12 +114,12 @@ export default function HeroSection() {
         width: "100%",
       }} className="absolute-card">
         <div className="absolute-card-content">
-          <h3>ESTA Team</h3>
+          <h3>ESTA Teamm</h3>
           <p>Innovative, creative, and collaborative.</p>
         </div>
       </div>
 
-      {/* Tambahan konten untuk next content */}
+      {/* Tambahan konten untuk next content
       <div className="next-content-section">
         <img
           src={dummyNext}
@@ -129,7 +129,7 @@ export default function HeroSection() {
         <div className="next-content-desc">
           Next content goes here!
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
