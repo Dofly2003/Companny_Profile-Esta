@@ -1,0 +1,36 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-color: #c7e8e2; /* biru muda */
+  overflow: hidden;
+}
+
+.hero-text {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 10vw;
+  font-weight: bold;
+  color: white;
+  opacity: 0.4;
+  z-index: 1;
+  line-height: 1;
+}
+
+.member-group {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  z-index: 2;
+}
+
+.member-img {
+  height: 40vh;
+  object-fit: contain;
+}
