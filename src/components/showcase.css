@@ -1,0 +1,81 @@
+.showcase-bg {
+  background: linear-gradient(135deg, #e3f0fc 0%, #b2dafe 100%);
+  min-height: 100vh;
+  padding: 0;
+  width: 100%;
+}
+.showcase-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3.5rem 1.2rem 2.2rem 1.2rem;
+}
+.showcase-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+.showcase-team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem 2.8rem;
+  justify-content: center;
+  align-items: stretch;
+}
+.showcase-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px #1976d21a;
+  padding: 1.4rem 1.1rem 1.3rem 1.1rem;
+  min-width: 210px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.19s, transform 0.16s;
+  cursor: pointer;
+  position: relative;
+}
+.showcase-img-wrap {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e7f2ff;
+  box-shadow: 0 1px 7px #b0d2e9a0;
+  margin-bottom: 1.1rem;
+  transition: box-shadow 0.15s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showcase-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.showcase-name {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #1976d2;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+.showcase-title-small {
+  font-size: 0.98rem;
+  color: #27679e;
+  opacity: .88;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .showcase-section { padding: 2.1rem 0.4rem 1.3rem 0.4rem;}
+  .showcase-title { font-size: 1.4rem; margin-bottom: 1.2rem; }
+  .showcase-team-list { gap: 1.2rem 0.3rem; }
+  .showcase-card { min-width: 130px; max-width: 98vw; padding: 0.8rem 0.4rem 0.9rem 0.4rem;}
+  .showcase-img-wrap { width: 63px; height: 63px; margin-bottom: 0.5rem;}
+  .showcase-name { font-size: 0.98rem; }
+  .showcase-title-small { font-size: 0.87rem; }
+}
